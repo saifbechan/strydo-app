@@ -1,13 +1,7 @@
 import uuidv1 from 'uuid/v1';
-import { LoremIpsum } from 'lorem-ipsum';
 import randomColor from 'randomcolor';
 
-const lorem = new LoremIpsum({
-  wordsPerSentence: {
-    max: 6,
-    min: 3
-  }
-});
+import Card from './classes/card.class';
 
 export default [
   {
@@ -15,22 +9,11 @@ export default [
     title: 'Backlog',
     backgroundColor: randomColor(),
     cards: [
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      }
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON()
     ]
   },
   {
@@ -38,22 +21,11 @@ export default [
     title: 'To do',
     backgroundColor: randomColor(),
     cards: [
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      }
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON()
     ]
   },
   {
@@ -61,22 +33,11 @@ export default [
     title: 'In progress',
     backgroundColor: randomColor(),
     cards: [
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      }
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON()
     ]
   },
   {
@@ -84,22 +45,11 @@ export default [
     title: 'Test',
     backgroundColor: randomColor(),
     cards: [
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      }
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON()
     ]
   },
   {
@@ -107,22 +57,11 @@ export default [
     title: 'Done',
     backgroundColor: randomColor(),
     cards: [
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      },
-      {
-        id: uuidv1(),
-        content: lorem.generateSentences(2)
-      }
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON(),
+      new Card().toJSON()
     ]
   }
 ];
