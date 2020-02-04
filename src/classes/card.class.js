@@ -9,16 +9,19 @@ const lorem = new LoremIpsum({
 });
 
 class Card {
-  constructor() {
-    this.id = uuidv1();
-    this.content = lorem.generateSentences(2);
+  constructor(id = uuidv1(), content = lorem.generateSentences(2)) {
+    this.id = id;
+    this.content = content;
   }
-  toJSON() {
-    return {
-      id: this.id,
-      content: this.content
-    };
-  }
+
+  getId = () => this.id;
+
+  getContent = () => this.content;
+
+  toJSON = () => ({
+    id: this.id,
+    content: this.content
+  });
 }
 
 export default Card;
