@@ -2,18 +2,20 @@ import React from 'react';
 
 import data from './data';
 
-import './App.css';
+import { GlobalStyle } from './global.styles';
+import { ColumnsContainer } from './App.styles';
 
 import Column from './components/column/column.component';
 
-function App() {
-  return (
-    <div className='App'>
+const App = () => (
+  <React.Fragment>
+    <GlobalStyle />
+    <ColumnsContainer>
       {data.map(column => (
         <Column key={column.id} {...column} />
       ))}
-    </div>
-  );
-}
+    </ColumnsContainer>
+  </React.Fragment>
+);
 
 export default App;

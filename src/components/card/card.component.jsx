@@ -1,9 +1,8 @@
 import React from 'react';
+import { CardContainer } from './card.styles';
 
 const Card = ({ id, children }) => (
-  <div className='card' id={id}>
-    {children}
-  </div>
+  <CardContainer id={id}>{children}</CardContainer>
 );
 
 export default Card;
