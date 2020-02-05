@@ -35,13 +35,38 @@ const App = () => {
     );
   };
 
+  const moveCard = (cardId, columnId, targetCardIndex, targetColumnId) => {
+    const cardsToMove = [];
+    const cloumnsWithCardRemoved = columns.map(column => {
+      if (column.id === columnId) {
+        column.cards = column.cards.filter(card => {
+          if (card.id !== cardId) {
+            return true;
+          }
+          cardsToMove.push(card);
+          return false;
+        });
+      }
+      return column;
+    });
+
+    setColumns(
+      cloumnsWithCardRemoved.map(column => {
+        if (column.id === targetColumnId) {
+          column.cards.splice(targetCardIndex, 0, ...cardsToMove);
+        }
+        return column;
+      })
+    );
+  };
+
   return (
     <React.Fragment>
       <GlobalStyle />
       <ColumnsContainer>
         {columns.map(column => (
           <div key={column.id}>
-            <Column {...column} removeCard={removeCard} />
+            <Column {...column} removeCard={removeCard} moveCard={moveCard} />
             <AddCard addCard={addCard} columnId={column.id} />
           </div>
         ))}
