@@ -14,7 +14,7 @@ it('renders correctly', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-it('calls addRow with the correct id on click', () => {
+it('calls addCard with the correct id on click', () => {
   const { getByTestId } = render(<AddCard {...props} />);
 
   fireEvent.click(getByTestId('add-card-handler'));

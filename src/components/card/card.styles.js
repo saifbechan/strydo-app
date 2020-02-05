@@ -7,6 +7,6 @@ export const CardContainer = styled.div`
   padding: 15px 20px;
 
   &:hover {
-    background-color: grey;
+    background-color: whitesmoke;
   }
 `;

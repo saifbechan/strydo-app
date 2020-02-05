@@ -10,7 +10,19 @@ exports[`renders correctly 1`] = `
 }
 
 .c0:hover {
-  background-color: grey;
+  background-color: whitesmoke;
+}
+
+.c1 {
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.c1:hover {
+  color: grey;
 }
 
 <div
@@ -19,6 +31,12 @@ exports[`renders correctly 1`] = `
     id="abc-123"
   >
     child
+    <button
+      class="c1"
+      data-testid="remove-card-handler"
+    >
+      - remove card
+    </button>
   </div>
 </DocumentFragment>
 `;
