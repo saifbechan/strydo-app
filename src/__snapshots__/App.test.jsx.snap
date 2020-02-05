@@ -2,33 +2,68 @@
 
 exports[`renders correctly when there is no data 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-AykKC hwzKXl"
+  .c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-rows: repeat(2,200px);
+  grid-gap: 15px;
+  margin: 0 15px;
+}
+
+<div
+    class="c0"
   />
 </DocumentFragment>
 `;
 
 exports[`renders correctly when there is no data 2`] = `
 <DocumentFragment>
-  <div
-    class="sc-AykKC hwzKXl"
+  .c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-rows: repeat(2,200px);
+  grid-gap: 15px;
+  margin: 0 15px;
+}
+
+.c1 {
+  border: 1px solid grey;
+}
+
+.c2 {
+  background-color: #FFF;
+  font-size: 15px;
+  margin: 0;
+  padding: 10px;
+}
+
+.c3 {
+  border-top: 1px solid grey;
+}
+
+.c4 {
+  cursor: pointer;
+}
+
+<div
+    class="c0"
   >
     <div>
       <div
-        class="sc-AykKE SvIYO"
+        class="c1"
         id="123-abc"
       >
         <h2
-          class="sc-AykKF hqiYti"
+          class="c2"
         >
           xyz
         </h2>
         <div
-          class="sc-AykKG dqscgA"
+          class="c3"
         />
       </div>
       <div
-        class="sc-AykKH cIkDAr"
+        class="c4"
         data-testid="add-card-handler"
       >
         + add card

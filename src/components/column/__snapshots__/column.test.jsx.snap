@@ -2,20 +2,45 @@
 
 exports[`renders correctly when there are cards 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-AykKD eVnrR"
+  .c3 {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.c3:hover {
+  background-color: grey;
+}
+
+.c0 {
+  border: 1px solid grey;
+}
+
+.c1 {
+  background-color: #FFF;
+  font-size: 15px;
+  margin: 0;
+  padding: 10px;
+}
+
+.c2 {
+  border-top: 1px solid grey;
+}
+
+<div
+    class="c0"
     id="abc-123"
   >
     <h2
-      class="sc-AykKE amLWt"
+      class="c1"
     >
       xyz
     </h2>
     <div
-      class="sc-AykKF gSXKoz"
+      class="c2"
     >
       <div
-        class="sc-AykKC gltYHh"
+        class="c3"
         data-testid="card"
         id="123-abc"
       >
@@ -28,17 +53,32 @@ exports[`renders correctly when there are cards 1`] = `
 
 exports[`renders correctly when there are no cards 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-AykKD eVnrR"
+  .c0 {
+  border: 1px solid grey;
+}
+
+.c1 {
+  background-color: #FFF;
+  font-size: 15px;
+  margin: 0;
+  padding: 10px;
+}
+
+.c2 {
+  border-top: 1px solid grey;
+}
+
+<div
+    class="c0"
     id="abc-123"
   >
     <h2
-      class="sc-AykKE amLWt"
+      class="c1"
     >
       xyz
     </h2>
     <div
-      class="sc-AykKF gSXKoz"
+      class="c2"
     />
   </div>
 </DocumentFragment>

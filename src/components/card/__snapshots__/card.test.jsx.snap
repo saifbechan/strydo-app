@@ -2,8 +2,18 @@
 
 exports[`renders correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-AykKC gltYHh"
+  .c0 {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.c0:hover {
+  background-color: grey;
+}
+
+<div
+    class="c0"
     data-testid="card"
     id="abc-123"
   >
