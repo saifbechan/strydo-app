@@ -3,7 +3,7 @@ import randomColor from 'randomcolor';
 
 import Card from './classes/card.class';
 
-export default [
+export default () => [
   {
     id: uuidv1(),
     title: 'Backlog',

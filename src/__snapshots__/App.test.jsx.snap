@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there is no data 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AykKC hwzKXl"
+  />
+</DocumentFragment>
+`;
+
+exports[`renders correctly when there is no data 2`] = `
+<DocumentFragment>
+  <div
+    class="sc-AykKC hwzKXl"
+  >
+    <div>
+      <div
+        class="sc-AykKE SvIYO"
+        id="123-abc"
+      >
+        <h2
+          class="sc-AykKF hqiYti"
+        >
+          xyz
+        </h2>
+        <div
+          class="sc-AykKG dqscgA"
+        />
+      </div>
+      <div
+        class="sc-AykKH cIkDAr"
+        data-testid="add-card-handler"
+      >
+        + add card
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

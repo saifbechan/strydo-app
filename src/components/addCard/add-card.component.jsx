@@ -4,7 +4,7 @@ import { AddCardContainer } from './add-card.styles';
 
 const AddCard = ({ columnId, addCard }) => (
   <AddCardContainer
-    data-testid='addCardHandler'
+    data-testid='add-card-handler'
     onClick={() => addCard(columnId)}
   >
     + add card

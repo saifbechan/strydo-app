@@ -16,7 +16,7 @@ it('renders correctly', () => {
 it('calls addRow with the correct id on click', () => {
   const { getByTestId } = render(<AddCard {...props} />);
 
-  fireEvent.click(getByTestId('addCardHandler'));
+  fireEvent.click(getByTestId('add-card-handler'));
 
   expect(props.addCard).toHaveBeenCalledWith(props.columnId);
 });

@@ -16,6 +16,7 @@ exports[`renders correctly when there are cards 1`] = `
     >
       <div
         class="sc-AykKC gltYHh"
+        data-testid="card"
         id="123-abc"
       >
         content

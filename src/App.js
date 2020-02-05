@@ -13,7 +13,7 @@ import AddCard from './components/addCard/add-card.component';
 const App = () => {
   const [columns, setColumns] = useState(data);
 
-  const addRow = columnId => {
+  const addCard = columnId => {
     setColumns(
       columns.map(column => {
         if (column.id === columnId) {
@@ -31,7 +31,7 @@ const App = () => {
         {columns.map(column => (
           <div key={column.id}>
             <Column {...column} />
-            <AddCard addRow={addRow} columnId={column.id} />
+            <AddCard addCard={addCard} columnId={column.id} />
           </div>
         ))}
       </ColumnsContainer>
