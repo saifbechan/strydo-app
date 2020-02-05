@@ -43,6 +43,9 @@ exports[`renders correctly when there is no data 2`] = `
 
 .c4 {
   cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
 }
 
 <div
@@ -62,12 +65,12 @@ exports[`renders correctly when there is no data 2`] = `
           class="c3"
         />
       </div>
-      <div
+      <button
         class="c4"
         data-testid="add-card-handler"
       >
         + add card
-      </div>
+      </button>
     </div>
   </div>
 </DocumentFragment>
