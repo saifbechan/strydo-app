@@ -4,13 +4,16 @@ exports[`renders correctly 1`] = `
 <DocumentFragment>
   .c0 {
   cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
 }
 
-<div
+<button
     class="c0"
     data-testid="add-card-handler"
   >
     + add card
-  </div>
+  </button>
 </DocumentFragment>
 `;

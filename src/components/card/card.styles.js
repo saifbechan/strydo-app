@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
+  border: 1px solid silver;
   cursor: pointer;
-  margin-bottom: 10px;
-  padding: 5px;
+  margin: 5px;
+  padding: 15px 20px;
 
   &:hover {
     background-color: grey;
