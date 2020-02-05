@@ -10,7 +10,19 @@ exports[`renders correctly when there are cards 1`] = `
 }
 
 .c3:hover {
-  background-color: grey;
+  background-color: whitesmoke;
+}
+
+.c4 {
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.c4:hover {
+  color: grey;
 }
 
 .c0 {
@@ -46,6 +58,12 @@ exports[`renders correctly when there are cards 1`] = `
         id="123-abc"
       >
         content
+        <button
+          class="c4"
+          data-testid="remove-card-handler"
+        >
+          - remove card
+        </button>
       </div>
     </div>
   </div>

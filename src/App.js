@@ -8,7 +8,7 @@ import { ColumnsContainer } from './App.styles';
 import Card from './classes/card.class';
 
 import Column from './components/column/column.component';
-import AddCard from './components/addCard/add-card.component';
+import AddCard from './components/add-card/add-card.component';
 
 const App = () => {
   const [columns, setColumns] = useState(data);
@@ -24,13 +24,24 @@ const App = () => {
     );
   };
 
+  const removeCard = (columnId, cardId) => {
+    setColumns(
+      columns.map(column => {
+        if (column.id === columnId) {
+          column.cards = column.cards.filter(card => card.id !== cardId);
+        }
+        return column;
+      })
+    );
+  };
+
   return (
     <React.Fragment>
       <GlobalStyle />
       <ColumnsContainer>
         {columns.map(column => (
           <div key={column.id}>
-            <Column {...column} />
+            <Column {...column} removeCard={removeCard} />
             <AddCard addCard={addCard} columnId={column.id} />
           </div>
         ))}

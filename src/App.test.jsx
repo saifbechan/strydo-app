@@ -58,3 +58,40 @@ it('adds a card when the `add-card-handler` is clicked', () => {
   fireEvent.click(getAllByTestId('add-card-handler')[0]);
   expect(getAllByTestId('card')).toHaveLength(3);
 });
+
+it('removes a card when the `remove-card-handler` is clicked', () => {
+  data.mockImplementation(() => [
+    {
+      id: '123-abc',
+      title: 'xyz',
+      backgroundColor: '#FFF',
+      cards: [
+        {
+          id: 'abc-123',
+          content: 'content'
+        }
+      ]
+    },
+    {
+      id: '456-def',
+      title: 'nop',
+      backgroundColor: '#000',
+      cards: [
+        {
+          id: 'efg-456',
+          content: 'content'
+        }
+      ]
+    }
+  ]);
+
+  const { getAllByTestId, queryAllByTestId } = render(<App />);
+
+  expect(getAllByTestId('card')).toHaveLength(2);
+
+  fireEvent.click(getAllByTestId('remove-card-handler')[0]);
+  expect(getAllByTestId('card')).toHaveLength(1);
+
+  fireEvent.click(getAllByTestId('remove-card-handler')[0]);
+  expect(queryAllByTestId('card')).toEqual([]);
+});
