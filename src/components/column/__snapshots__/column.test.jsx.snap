@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are cards 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AykKD eVnrR"
+    id="abc-123"
+  >
+    <h2
+      class="sc-AykKE amLWt"
+    >
+      xyz
+    </h2>
+    <div
+      class="sc-AykKF gSXKoz"
+    >
+      <div
+        class="sc-AykKC gltYHh"
+        id="123-abc"
+      >
+        content
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders correctly when there are no cards 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AykKD eVnrR"
+    id="abc-123"
+  >
+    <h2
+      class="sc-AykKE amLWt"
+    >
+      xyz
+    </h2>
+    <div
+      class="sc-AykKF gSXKoz"
+    />
+  </div>
+</DocumentFragment>
+`;
