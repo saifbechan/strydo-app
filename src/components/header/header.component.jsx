@@ -8,7 +8,7 @@ import {
 
 const Header = () => (
   <HeaderComponent>
-    <HeaderLogoComponent src='/logo.png' />
+    <HeaderLogoComponent src={`${process.env.PUBLIC_URL}/logo.png`} />
     <HeaderTitleComponent>Strydo App</HeaderTitleComponent>
     <HeaderSubTitleComponent>
       a lightweight kanban board showcase app
