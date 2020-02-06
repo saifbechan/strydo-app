@@ -26,6 +26,17 @@ exports[`renders correctly when there is no data 2`] = `
   margin: 0 15px;
 }
 
+.c4 {
+  height: 5px;
+  padding: 5px;
+}
+
+.c5 {
+  background: none;
+  border: none;
+  height: 100%;
+}
+
 .c1 {
   border: 1px solid grey;
 }
@@ -41,7 +52,7 @@ exports[`renders correctly when there is no data 2`] = `
   border-top: 1px solid grey;
 }
 
-.c4 {
+.c6 {
   cursor: pointer;
   margin-top: 15px;
   padding: 5px;
@@ -49,7 +60,7 @@ exports[`renders correctly when there is no data 2`] = `
   width: 100%;
 }
 
-.c4:hover {
+.c6:hover {
   color: grey;
 }
 
@@ -68,10 +79,18 @@ exports[`renders correctly when there is no data 2`] = `
         </h2>
         <div
           class="c3"
-        />
+        >
+          <div
+            class="c4"
+          >
+            <div
+              class="c5"
+            />
+          </div>
+        </div>
       </div>
       <button
-        class="c4"
+        class="c6"
         data-testid="add-card-handler"
       >
         + add card

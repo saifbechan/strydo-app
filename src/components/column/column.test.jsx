@@ -1,8 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { useDrag, useDrop } from 'react-dnd';
 import 'jest-styled-components';
 
 import Column from './column.component';
+
+jest.mock('react-dnd');
+
+useDrag.mockImplementation(() => [{ isDragging: false }, () => {}]);
+useDrop.mockImplementation(() => [{ isOver: false }, () => {}]);
 
 const props = {
   id: 'abc-123',
