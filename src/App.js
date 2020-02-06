@@ -5,6 +5,7 @@ import data from './data';
 import { GlobalStyle } from './global.styles';
 import { ColumnsContainer } from './App.styles';
 
+import Header from './components/header/header.component';
 import Column from './components/column/column.component';
 import AddCard from './components/add-card/add-card.component';
 
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <React.Fragment>
       <GlobalStyle />
+      <Header />
       <ColumnsContainer>
         {columns.map(column => (
           <div key={column.id}>

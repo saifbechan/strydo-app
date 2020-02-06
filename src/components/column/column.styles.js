@@ -4,7 +4,7 @@ export const ColumnContainer = styled.div`
   border: 1px solid grey;
 `;
 
-export const H2Container = styled.h2`
+export const H3Container = styled.h3`
   background-color: ${({ backgroundColor }) => `${backgroundColor}`};
   font-size: 15px;
   margin: 0;

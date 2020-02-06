@@ -3,7 +3,7 @@ import React from 'react';
 import Card from '../card/card.component';
 import DropCard from './../drop-card/drop-card.component';
 
-import { ColumnContainer, H2Container, CardsContainer } from './column.styles';
+import { ColumnContainer, H3Container, CardsContainer } from './column.styles';
 
 const Column = ({
   id,
@@ -14,7 +14,7 @@ const Column = ({
   moveCard
 }) => (
   <ColumnContainer id={id}>
-    <H2Container backgroundColor={backgroundColor}>{title}</H2Container>
+    <H3Container backgroundColor={backgroundColor}>{title}</H3Container>
     <CardsContainer>
       <DropCard idx={0} columnId={id} moveCard={moveCard} />
       {cards.map((card, idx) => (
