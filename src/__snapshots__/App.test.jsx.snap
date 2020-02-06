@@ -4,10 +4,56 @@ exports[`renders correctly when there is no data 1`] = `
 <DocumentFragment>
   .c0 {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-  grid-template-rows: repeat(2,200px);
+  grid-template-columns: 140px auto;
+  margin: 0 0 0 100px;
+}
+
+.c1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.c2 {
+  font-family: 'Lato';
+  font-size: 3em;
+  font-weight: bold;
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+.c3 {
+  color: grey;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+<div
+    class="c0"
+  >
+    <img
+      class="c1"
+      src="/logo.png"
+    />
+    <h1
+      class="c2"
+    >
+      Strydo App
+    </h1>
+    <h2
+      class="c3"
+    >
+      a lightweight kanban board showcase app
+    </h2>
+  </div>
+  .c0 {
+  display: grid;
+  grid-auto-flow: column;
   grid-gap: 15px;
-  margin: 0 15px;
+  margin: 0 75px;
 }
 
 <div
@@ -20,10 +66,56 @@ exports[`renders correctly when there is no data 2`] = `
 <DocumentFragment>
   .c0 {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-  grid-template-rows: repeat(2,200px);
+  grid-template-columns: 140px auto;
+  margin: 0 0 0 100px;
+}
+
+.c1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.c2 {
+  font-family: 'Lato';
+  font-size: 3em;
+  font-weight: bold;
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+.c3 {
+  color: grey;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+<div
+    class="c0"
+  >
+    <img
+      class="c1"
+      src="/logo.png"
+    />
+    <h1
+      class="c2"
+    >
+      Strydo App
+    </h1>
+    <h2
+      class="c3"
+    >
+      a lightweight kanban board showcase app
+    </h2>
+  </div>
+  .c0 {
+  display: grid;
+  grid-auto-flow: column;
   grid-gap: 15px;
-  margin: 0 15px;
+  margin: 0 75px;
 }
 
 .c4 {
@@ -72,11 +164,11 @@ exports[`renders correctly when there is no data 2`] = `
         class="c1"
         id="123-abc"
       >
-        <h2
+        <h3
           class="c2"
         >
           xyz
-        </h2>
+        </h3>
         <div
           class="c3"
         >
