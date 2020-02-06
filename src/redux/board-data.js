@@ -1,7 +1,7 @@
 import uuidv1 from 'uuid/v1';
 import randomColor from 'randomcolor';
 
-import Card from './classes/card.class';
+import Card from './../classes/card.class';
 
 export default () => [
   {

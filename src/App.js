@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-
-import data from './data';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 
 import { GlobalStyle } from './global.styles';
 import { ColumnsContainer } from './App.styles';
@@ -10,9 +9,14 @@ import Column from './components/column/column.component';
 import AddCard from './components/add-card/add-card.component';
 
 import { addCard, removeCard, moveCard } from './utils/column.utils';
+import { getBoardData } from './redux/board/board.action';
 
-const App = () => {
-  const [columns, setColumns] = useState(data);
+const App = ({ columns, getBoardData }) => {
+  useEffect(() => {
+    getBoardData();
+  }, [getBoardData]);
+
+  const setColumns = () => console.log('Need to update state soon!');
 
   const handleAddCard = (...args) => setColumns(addCard(columns, ...args));
   const handleRemoveCard = (...args) =>
@@ -39,4 +43,12 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStateToProps = ({ board: { columns } }) => ({
+  columns
+});
+
+const mapDispatchToProps = dispatch => ({
+  getBoardData: () => dispatch(getBoardData())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
