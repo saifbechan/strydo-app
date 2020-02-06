@@ -1,5 +1,6 @@
 import boardData from '../board-data';
 import BoardActionTypes from './board.types';
+import Card from './../../classes/card.class';
 
 const INITIAL_STATE = {
   columns: []
@@ -12,16 +13,24 @@ const boardReducer = (state = INITIAL_STATE, action) => {
         ...state,
         columns: boardData()
       };
-    case BoardActionTypes.REMOVE_CARD:
-      const {
-        payload: { columnId, cardId }
-      } = action;
-      const { columns } = state;
+    case BoardActionTypes.ADD_CARD:
       return {
         ...state,
-        columns: columns.map(column => {
-          if (column.id === columnId) {
-            column.cards = column.cards.filter(card => card.id !== cardId);
+        columns: state.columns.map(column => {
+          if (column.id === action.payload) {
+            column.cards.push(new Card().toJSON());
+          }
+          return column;
+        })
+      };
+    case BoardActionTypes.REMOVE_CARD:
+      return {
+        ...state,
+        columns: state.columns.map(column => {
+          if (column.id === action.payload.columnId) {
+            column.cards = column.cards.filter(
+              card => card.id !== action.payload.cardId
+            );
           }
           return column;
         })

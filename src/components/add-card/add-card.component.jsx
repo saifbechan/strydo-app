@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { addCard } from '../../redux/board/board.action';
 
 import { AddCardContainer } from './add-card.styles';
 
@@ -11,4 +14,8 @@ const AddCard = ({ columnId, addCard }) => (
   </AddCardContainer>
 );
 
-export default AddCard;
+const mapDispatchToProps = dispatch => ({
+  addCard: columnId => dispatch(addCard(columnId))
+});
+
+export default connect(null, mapDispatchToProps)(AddCard);
