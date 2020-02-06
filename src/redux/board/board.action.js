@@ -13,3 +13,13 @@ export const addCard = columnId => ({
   type: BoardActionTypes.ADD_CARD,
   payload: columnId
 });
+
+export const moveCard = ({
+  columnId,
+  cardId,
+  targetColumnId,
+  targetIndex
+}) => ({
+  type: BoardActionTypes.MOVE_CARD,
+  payload: { columnId, cardId, targetColumnId, targetIndex }
+});
