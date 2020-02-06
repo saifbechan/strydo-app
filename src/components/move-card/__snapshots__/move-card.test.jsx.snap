@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<DocumentFragment>
+  .c0 {
+  height: 5px;
+  padding: 5px;
+}
+
+.c1 {
+  background: none;
+  border: none;
+  height: 100%;
+}
+
+<div
+    class="c0"
+    data-testid="move-card-handler"
+  >
+    <div
+      class="c1"
+    />
+  </div>
+</DocumentFragment>
+`;

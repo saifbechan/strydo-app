@@ -5,7 +5,7 @@ import { addCard } from '../../redux/board/board.action';
 
 import { AddCardContainer } from './add-card.styles';
 
-const AddCard = ({ columnId, addCard }) => (
+export const AddCard = ({ columnId, addCard }) => (
   <AddCardContainer
     data-testid='add-card-handler'
     onClick={() => addCard(columnId)}

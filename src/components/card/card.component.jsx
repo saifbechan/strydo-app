@@ -4,11 +4,11 @@ import { useDrag } from 'react-dnd';
 import { ItemTypes } from '../../dnd/itemtypes';
 
 import RemoveCard from '../remove-card/remove-card.component';
+import MoveCard from '../move-card/move-card.component';
 
 import { CardContainer } from './card.styles';
-import DropCard from './../drop-card/drop-card.component';
 
-const Card = ({ id, idx, columnId, children }) => {
+export const Card = ({ id, idx, columnId, children }) => {
   const [{ isDragging }, drag] = useDrag({
     item: { type: ItemTypes.CARD, id, columnId },
     collect: monitor => ({
@@ -27,7 +27,7 @@ const Card = ({ id, idx, columnId, children }) => {
         {children}
         <RemoveCard columnId={columnId} cardId={id} />
       </CardContainer>
-      <DropCard idx={++idx} columnId={columnId} />
+      <MoveCard idx={++idx} columnId={columnId} />
     </div>
   );
 };

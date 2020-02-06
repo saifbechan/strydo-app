@@ -7,11 +7,11 @@ import { ItemTypes } from '../../dnd/itemtypes';
 import { moveCard } from '../../redux/board/board.action';
 
 import {
-  DropCardContainer,
-  DropCardPlaceholderContainer
-} from './drop-card.styles';
+  MoveCardContainer,
+  MoveCardPlaceholderContainer
+} from './move-card.styles';
 
-const DropCard = ({ idx, columnId, moveCard }) => {
+export const MoveCard = ({ idx, columnId, moveCard }) => {
   const [{ isOver }, drop] = useDrop({
     accept: ItemTypes.CARD,
     drop: item =>
@@ -28,9 +28,13 @@ const DropCard = ({ idx, columnId, moveCard }) => {
   });
 
   return (
-    <DropCardContainer ref={drop} isOver={isOver}>
-      <DropCardPlaceholderContainer isOver={isOver} />
-    </DropCardContainer>
+    <MoveCardContainer
+      ref={drop}
+      isOver={isOver}
+      data-testid='move-card-handler'
+    >
+      <MoveCardPlaceholderContainer isOver={isOver} />
+    </MoveCardContainer>
   );
 };
 
@@ -39,4 +43,4 @@ const mapDispatchToProps = dispatch => ({
     dispatch(moveCard({ columnId, cardId, targetColumnId, targetIndex }))
 });
 
-export default connect(null, mapDispatchToProps)(DropCard);
+export default connect(null, mapDispatchToProps)(MoveCard);

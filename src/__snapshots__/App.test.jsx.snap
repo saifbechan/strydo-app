@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly when there is no data 1`] = `
+exports[`renders correctly with redux with defaults 1`] = `
 <DocumentFragment>
   .c0 {
   display: grid;
@@ -62,7 +62,7 @@ exports[`renders correctly when there is no data 1`] = `
 </DocumentFragment>
 `;
 
-exports[`renders correctly when there is no data 2`] = `
+exports[`renders correctly with redux with new data on mount 1`] = `
 <DocumentFragment>
   .c0 {
   display: grid;
@@ -118,6 +118,18 @@ exports[`renders correctly when there is no data 2`] = `
   margin: 0 75px;
 }
 
+.c7 {
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.c7:hover {
+  color: grey;
+}
+
 .c4 {
   height: 5px;
   padding: 5px;
@@ -127,6 +139,16 @@ exports[`renders correctly when there is no data 2`] = `
   background: none;
   border: none;
   height: 100%;
+}
+
+.c6 {
+  border: 1px solid silver;
+  margin: 0 5px;
+  padding: 15px 20px;
+}
+
+.c6:hover {
+  background-color: whitesmoke;
 }
 
 .c1 {
@@ -144,7 +166,7 @@ exports[`renders correctly when there is no data 2`] = `
   border-top: 1px solid grey;
 }
 
-.c6 {
+.c8 {
   cursor: pointer;
   margin-top: 15px;
   padding: 5px;
@@ -152,7 +174,7 @@ exports[`renders correctly when there is no data 2`] = `
   width: 100%;
 }
 
-.c6:hover {
+.c8:hover {
   color: grey;
 }
 
@@ -162,7 +184,7 @@ exports[`renders correctly when there is no data 2`] = `
     <div>
       <div
         class="c1"
-        id="123-abc"
+        id="abc-123"
       >
         <h3
           class="c2"
@@ -174,15 +196,39 @@ exports[`renders correctly when there is no data 2`] = `
         >
           <div
             class="c4"
+            data-testid="move-card-handler"
           >
             <div
               class="c5"
             />
           </div>
+          <div>
+            <div
+              class="c6"
+              data-testid="card"
+              id="123-abc"
+            >
+              content
+              <button
+                class="c7"
+                data-testid="remove-card-handler"
+              >
+                - remove card
+              </button>
+            </div>
+            <div
+              class="c4"
+              data-testid="move-card-handler"
+            >
+              <div
+                class="c5"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <button
-        class="c6"
+        class="c8"
         data-testid="add-card-handler"
       >
         + add card

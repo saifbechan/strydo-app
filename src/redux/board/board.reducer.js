@@ -2,11 +2,11 @@ import boardData from '../board-data';
 import BoardActionTypes from './board.types';
 import Card from './../../classes/card.class';
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   columns: []
 };
 
-const boardReducer = (state = INITIAL_STATE, action) => {
+export const boardReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case BoardActionTypes.GET_BOARD_DATA:
       return {
@@ -67,5 +67,3 @@ const boardReducer = (state = INITIAL_STATE, action) => {
       return state;
   }
 };
-
-export default boardReducer;

@@ -1,102 +1,55 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { render } from '@testing-library/react';
 import { useDrag, useDrop } from 'react-dnd';
 import 'jest-styled-components';
 
 import App from './App';
+import { INITIAL_STATE } from './redux/board/board.reducer';
+import mockStore from './redux/store.mock';
+import rootReducer from './redux/root-reducer';
 
-import data from './data';
+import data from './redux/board-data';
 
-jest.mock('./data');
 jest.mock('react-dnd');
+jest.mock('./redux/board-data');
 
 useDrag.mockImplementation(() => [{ isDragging: false }, () => {}]);
 useDrop.mockImplementation(() => [{ isOver: false }, () => {}]);
 
-it('renders correctly when there is no data', () => {
-  data.mockImplementation(() => []);
+data.mockImplementation(() => [
+  {
+    id: 'abc-123',
+    title: 'xyz',
+    backgroundColor: '#FFF',
+    cards: [
+      {
+        id: '123-abc',
+        content: 'content'
+      }
+    ]
+  }
+]);
 
-  const { asFragment } = render(<App />);
+const renderWithRedux = (
+  ui,
+  { initialState, store = createStore(rootReducer, initialState) } = {}
+) => {
+  return {
+    ...render(<Provider store={store}>{ui}</Provider>),
+    store
+  };
+};
+
+it('renders correctly with redux with defaults', () => {
+  const store = mockStore({ board: INITIAL_STATE });
+
+  const { asFragment } = render(<App store={store} />);
   expect(asFragment()).toMatchSnapshot();
 });
 
-it('renders correctly when there is no data', () => {
-  data.mockImplementation(() => [
-    {
-      id: '123-abc',
-      title: 'xyz',
-      backgroundColor: '#FFF',
-      cards: []
-    }
-  ]);
-
-  const { asFragment } = render(<App />);
+it('renders correctly with redux with new data on mount', () => {
+  const { asFragment } = renderWithRedux(<App />);
   expect(asFragment()).toMatchSnapshot();
-});
-
-it('adds a card when the `add-card-handler` is clicked', () => {
-  data.mockImplementation(() => [
-    {
-      id: '123-abc',
-      title: 'xyz',
-      backgroundColor: '#FFF',
-      cards: [
-        {
-          id: 'abc-123',
-          content: 'content'
-        }
-      ]
-    },
-    {
-      id: '456-def',
-      title: 'nop',
-      backgroundColor: '#000',
-      cards: []
-    }
-  ]);
-
-  const { getAllByTestId } = render(<App />);
-
-  fireEvent.click(getAllByTestId('add-card-handler')[0]);
-  expect(getAllByTestId('card')).toHaveLength(2);
-
-  fireEvent.click(getAllByTestId('add-card-handler')[0]);
-  expect(getAllByTestId('card')).toHaveLength(3);
-});
-
-it('removes a card when the `remove-card-handler` is clicked', () => {
-  data.mockImplementation(() => [
-    {
-      id: '123-abc',
-      title: 'xyz',
-      backgroundColor: '#FFF',
-      cards: [
-        {
-          id: 'abc-123',
-          content: 'content'
-        }
-      ]
-    },
-    {
-      id: '456-def',
-      title: 'nop',
-      backgroundColor: '#000',
-      cards: [
-        {
-          id: 'efg-456',
-          content: 'content'
-        }
-      ]
-    }
-  ]);
-
-  const { getAllByTestId, queryAllByTestId } = render(<App />);
-
-  expect(getAllByTestId('card')).toHaveLength(2);
-
-  fireEvent.click(getAllByTestId('remove-card-handler')[0]);
-  expect(getAllByTestId('card')).toHaveLength(1);
-
-  fireEvent.click(getAllByTestId('remove-card-handler')[0]);
-  expect(queryAllByTestId('card')).toEqual([]);
 });

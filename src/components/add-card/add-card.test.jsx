@@ -2,22 +2,27 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import 'jest-styled-components';
 
-import AddCard from './add-card.component';
+import mockStore from './../../redux/store.mock';
+
+import AddCard, { AddCard as AddCardPure } from './add-card.component';
 
 const props = {
-  columnId: 'abc-123',
-  addCard: jest.fn()
+  columnId: 'abc-123'
 };
 
 it('renders correctly', () => {
-  const { asFragment } = render(<AddCard {...props} />);
+  const { asFragment } = render(<AddCardPure {...props} />);
   expect(asFragment()).toMatchSnapshot();
 });
 
-it('calls addCard with the correct id on click', () => {
-  const { getByTestId } = render(<AddCard {...props} />);
+it('calls addCard with the correct payload on click', () => {
+  const store = mockStore();
+
+  const { getByTestId } = render(<AddCard store={store} {...props} />);
 
   fireEvent.click(getByTestId('add-card-handler'));
 
-  expect(props.addCard).toHaveBeenCalledWith(props.columnId);
+  expect(store.getActions()).toEqual([
+    { type: 'ADD_CARD', payload: 'abc-123' }
+  ]);
 });

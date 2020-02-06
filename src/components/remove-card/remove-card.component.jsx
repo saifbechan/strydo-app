@@ -5,7 +5,7 @@ import { removeCard } from '../../redux/board/board.action';
 
 import { RemoveCardContainer } from './remove-card.styles';
 
-const RemoveCard = ({ columnId, cardId, removeCard }) => (
+export const RemoveCard = ({ columnId, cardId, removeCard }) => (
   <RemoveCardContainer
     data-testid='remove-card-handler'
     onClick={() => removeCard({ columnId, cardId })}

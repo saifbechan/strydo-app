@@ -18,6 +18,7 @@
     "react-scripts": "3.3.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.4",
     "styled-components": "^5.0.0",
     "uuid": "^3.4.0"
   },
@@ -54,7 +55,7 @@
       "!<rootDir>/node_modules/",
       "!<rootDir>/src/serviceWorker.js",
       "!<rootDir>/src/index.js",
-      "!<rootDir>/src/data.js"
+      "!<rootDir>/src/redux/*.js"
     ]
   }
 }
