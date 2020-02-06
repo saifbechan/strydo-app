@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/strydo-app/precache-manifest.64b393fbb1dcb3decbbc2602fbd14b34.js"
+  "/strydo-app/precache-manifest.c54a86944aecac5b309f894bcdfe91f1.js"
 );
 
 self.addEventListener('message', (event) => {
