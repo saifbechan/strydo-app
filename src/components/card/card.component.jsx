@@ -8,7 +8,7 @@ import RemoveCard from '../remove-card/remove-card.component';
 import { CardContainer } from './card.styles';
 import DropCard from './../drop-card/drop-card.component';
 
-const Card = ({ id, idx, columnId, removeCard, moveCard, children }) => {
+const Card = ({ id, idx, columnId, moveCard, children }) => {
   const [{ isDragging }, drag] = useDrag({
     item: { type: ItemTypes.CARD, id, columnId },
     collect: monitor => ({
@@ -25,7 +25,7 @@ const Card = ({ id, idx, columnId, removeCard, moveCard, children }) => {
         isDragging={isDragging}
       >
         {children}
-        <RemoveCard columnId={columnId} cardId={id} removeCard={removeCard} />
+        <RemoveCard columnId={columnId} cardId={id} />
       </CardContainer>
       <DropCard idx={++idx} columnId={columnId} moveCard={moveCard} />
     </div>

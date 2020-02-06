@@ -5,14 +5,7 @@ import DropCard from './../drop-card/drop-card.component';
 
 import { ColumnContainer, H3Container, CardsContainer } from './column.styles';
 
-const Column = ({
-  id,
-  title,
-  backgroundColor,
-  cards,
-  removeCard,
-  moveCard
-}) => (
+const Column = ({ id, title, backgroundColor, cards, moveCard }) => (
   <ColumnContainer id={id}>
     <H3Container backgroundColor={backgroundColor}>{title}</H3Container>
     <CardsContainer>
@@ -23,7 +16,6 @@ const Column = ({
           id={card.id}
           idx={idx}
           columnId={id}
-          removeCard={removeCard}
           moveCard={moveCard}
         >
           {card.content}

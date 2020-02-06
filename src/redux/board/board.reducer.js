@@ -12,6 +12,20 @@ const boardReducer = (state = INITIAL_STATE, action) => {
         ...state,
         columns: boardData()
       };
+    case BoardActionTypes.REMOVE_CARD:
+      const {
+        payload: { columnId, cardId }
+      } = action;
+      const { columns } = state;
+      return {
+        ...state,
+        columns: columns.map(column => {
+          if (column.id === columnId) {
+            column.cards = column.cards.filter(card => card.id !== cardId);
+          }
+          return column;
+        })
+      };
     default:
       return state;
   }

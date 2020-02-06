@@ -8,7 +8,7 @@ import Header from './components/header/header.component';
 import Column from './components/column/column.component';
 import AddCard from './components/add-card/add-card.component';
 
-import { addCard, removeCard, moveCard } from './utils/column.utils';
+import { addCard, moveCard } from './utils/column.utils';
 import { getBoardData } from './redux/board/board.action';
 
 const App = ({ columns, getBoardData }) => {
@@ -19,8 +19,6 @@ const App = ({ columns, getBoardData }) => {
   const setColumns = () => console.log('Need to update state soon!');
 
   const handleAddCard = (...args) => setColumns(addCard(columns, ...args));
-  const handleRemoveCard = (...args) =>
-    setColumns(removeCard(columns, ...args));
   const handleMoveCard = (...args) => setColumns(moveCard(columns, ...args));
 
   return (
@@ -30,11 +28,7 @@ const App = ({ columns, getBoardData }) => {
       <ColumnsContainer>
         {columns.map(column => (
           <div key={column.id}>
-            <Column
-              {...column}
-              removeCard={handleRemoveCard}
-              moveCard={handleMoveCard}
-            />
+            <Column {...column} moveCard={handleMoveCard} />
             <AddCard addCard={handleAddCard} columnId={column.id} />
           </div>
         ))}
