@@ -18,9 +18,6 @@ const Card = ({ id, idx, columnId, removeCard, moveCard, children }) => {
 
   return (
     <div>
-      {idx === 0 ? (
-        <DropCard idx={idx} columnId={columnId} moveCard={moveCard} />
-      ) : null}
       <CardContainer
         id={id}
         data-testid='card'

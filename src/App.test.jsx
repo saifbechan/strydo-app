@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import { useDrag, useDrop } from 'react-dnd';
 import 'jest-styled-components';
 
 import App from './App';
@@ -7,6 +8,10 @@ import App from './App';
 import data from './data';
 
 jest.mock('./data');
+jest.mock('react-dnd');
+
+useDrag.mockImplementation(() => [{ isDragging: false }, () => {}]);
+useDrop.mockImplementation(() => [{ isOver: false }, () => {}]);
 
 it('renders correctly when there is no data', () => {
   data.mockImplementation(() => []);

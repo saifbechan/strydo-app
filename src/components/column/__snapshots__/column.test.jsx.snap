@@ -2,18 +2,7 @@
 
 exports[`renders correctly when there are cards 1`] = `
 <DocumentFragment>
-  .c3 {
-  border: 1px solid silver;
-  cursor: pointer;
-  margin: 5px;
-  padding: 15px 20px;
-}
-
-.c3:hover {
-  background-color: whitesmoke;
-}
-
-.c4 {
+  .c6 {
   cursor: pointer;
   margin-top: 15px;
   padding: 5px;
@@ -21,8 +10,29 @@ exports[`renders correctly when there are cards 1`] = `
   width: 100%;
 }
 
-.c4:hover {
+.c6:hover {
   color: grey;
+}
+
+.c5 {
+  border: 1px solid silver;
+  margin: 0 5px;
+  padding: 15px 20px;
+}
+
+.c5:hover {
+  background-color: whitesmoke;
+}
+
+.c3 {
+  height: 5px;
+  padding: 5px;
+}
+
+.c4 {
+  background: none;
+  border: none;
+  height: 100%;
 }
 
 .c0 {
@@ -54,16 +64,32 @@ exports[`renders correctly when there are cards 1`] = `
     >
       <div
         class="c3"
-        data-testid="card"
-        id="123-abc"
       >
-        content
-        <button
+        <div
           class="c4"
-          data-testid="remove-card-handler"
+        />
+      </div>
+      <div>
+        <div
+          class="c5"
+          data-testid="card"
+          id="123-abc"
         >
-          - remove card
-        </button>
+          content
+          <button
+            class="c6"
+            data-testid="remove-card-handler"
+          >
+            - remove card
+          </button>
+        </div>
+        <div
+          class="c3"
+        >
+          <div
+            class="c4"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -72,7 +98,18 @@ exports[`renders correctly when there are cards 1`] = `
 
 exports[`renders correctly when there are no cards 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c3 {
+  height: 5px;
+  padding: 5px;
+}
+
+.c4 {
+  background: none;
+  border: none;
+  height: 100%;
+}
+
+.c0 {
   border: 1px solid grey;
 }
 
@@ -98,7 +135,15 @@ exports[`renders correctly when there are no cards 1`] = `
     </h2>
     <div
       class="c2"
-    />
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        />
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
