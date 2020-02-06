@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c7876f7f86cb49ecd1049a9e934b5d7c",
+    "revision": "21e989600c336b4cd45a79b196fc9c22",
     "url": "/strydo-app/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/strydo-app/static/js/2.009bc226.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3c9252f4e29ab2391a18",
-    "url": "/strydo-app/static/js/main.cfbc9031.chunk.js"
+    "revision": "b7fb0242b981e283e3ba",
+    "url": "/strydo-app/static/js/main.07ddfaf8.chunk.js"
   },
   {
     "revision": "667f46de526128ecdee6",
