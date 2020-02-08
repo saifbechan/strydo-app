@@ -12,7 +12,7 @@ The application will be split into multiple version.
 
 2. The second version will be a little more advanced utilizing `React Redux`. Prop drilling will be way less, but we will still work with a offline data file.
 
-   #### **tag**: ~
+   #### **tag**: https://github.com/saifbechan/strydo-app/releases/tag/v2.0.0
 
 3. Next Implement `Sagas` so we get a better seperation of concerns and prepare for async functions.
 
