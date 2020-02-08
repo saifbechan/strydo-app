@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/strydo-app/static/js/main.07ddfaf8.chunk.js",
-    "main.js.map": "/strydo-app/static/js/main.07ddfaf8.chunk.js.map",
+    "main.js": "/strydo-app/static/js/main.81ce9d7e.chunk.js",
+    "main.js.map": "/strydo-app/static/js/main.81ce9d7e.chunk.js.map",
     "runtime-main.js": "/strydo-app/static/js/runtime-main.57cfc3d9.js",
     "runtime-main.js.map": "/strydo-app/static/js/runtime-main.57cfc3d9.js.map",
-    "static/js/2.009bc226.chunk.js": "/strydo-app/static/js/2.009bc226.chunk.js",
-    "static/js/2.009bc226.chunk.js.map": "/strydo-app/static/js/2.009bc226.chunk.js.map",
+    "static/js/2.3f911a0a.chunk.js": "/strydo-app/static/js/2.3f911a0a.chunk.js",
+    "static/js/2.3f911a0a.chunk.js.map": "/strydo-app/static/js/2.3f911a0a.chunk.js.map",
     "index.html": "/strydo-app/index.html",
-    "precache-manifest.76864691726cef4b538d1d4ae846f6a8.js": "/strydo-app/precache-manifest.76864691726cef4b538d1d4ae846f6a8.js",
+    "precache-manifest.b1cb83718dab4477f3f85757929cce5f.js": "/strydo-app/precache-manifest.b1cb83718dab4477f3f85757929cce5f.js",
     "service-worker.js": "/strydo-app/service-worker.js",
-    "static/js/2.009bc226.chunk.js.LICENSE.txt": "/strydo-app/static/js/2.009bc226.chunk.js.LICENSE.txt"
+    "static/js/2.3f911a0a.chunk.js.LICENSE.txt": "/strydo-app/static/js/2.3f911a0a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.57cfc3d9.js",
-    "static/js/2.009bc226.chunk.js",
-    "static/js/main.07ddfaf8.chunk.js"
+    "static/js/2.3f911a0a.chunk.js",
+    "static/js/main.81ce9d7e.chunk.js"
   ]
 }
